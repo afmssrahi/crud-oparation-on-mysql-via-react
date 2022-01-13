@@ -20,11 +20,13 @@ const CreatePost = () => {
 	const history = useHistory();
 
 	const handleSubmit = (data) => {
-		axios.post('http://localhost:5000/posts', data).then((response) => {
-			alert('data insert successfully');
+		axios
+			.post('https://mynodeapp.zoomex.xyz/posts', data)
+			.then((response) => {
+				alert('data insert successfully');
 
-			history.push('/home');
-		});
+				history.push('/home');
+			});
 	};
 
 	return (
