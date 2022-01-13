@@ -9,7 +9,7 @@ const PostCard = () => {
 	const [listOfPost, setListOfPost] = useState([]);
 
 	useEffect(() => {
-		axios.get(mynodeapp.zoomex.xyz/posts').then((response) => {
+		axios.get('https://mynodeapp.zoomex.xyz/posts').then((response) => {
 			setListOfPost(response.data);
 		});
 	}, []);
@@ -57,7 +57,7 @@ const PostCard = () => {
 
 		// UPDATE SERVER DATA
 		axios
-			.put(mynodeapp.zoomex.xyz/posts/update', data)
+			.put('https://mynodeapp.zoomex.xyz/posts/update', data)
 			.then((response) => {
 				handleClose();
 
@@ -73,7 +73,7 @@ const PostCard = () => {
 	const handleDelete = (id) => {
 		console.log(id);
 		axios
-			.post(mynodeapp.zoomex.xyz/posts/delete', { postId: id })
+			.post('https://mynodeapp.zoomex.xyz/posts/delete', { postId: id })
 			.then((response) => {
 				// UPDATE LIST OF POST in UI
 				const listOfPostRemoveIndex = listOfPost.findIndex(
