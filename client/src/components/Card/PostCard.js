@@ -9,9 +9,11 @@ const PostCard = () => {
 	const [listOfPost, setListOfPost] = useState([]);
 
 	useEffect(() => {
-		axios.get('http://localhost:5000/posts').then((response) => {
-			setListOfPost(response.data);
-		});
+		axios
+			.get('https://calm-plains-01793.herokuapp.com/posts')
+			.then((response) => {
+				setListOfPost(response.data);
+			});
 	}, []);
 	// For Get data And show data in UI ------------- end
 
@@ -57,7 +59,7 @@ const PostCard = () => {
 
 		// UPDATE SERVER DATA
 		axios
-			.put('http://localhost:5000/posts/update', data)
+			.put('https://calm-plains-01793.herokuapp.com/posts/update', data)
 			.then((response) => {
 				handleClose();
 
@@ -73,7 +75,9 @@ const PostCard = () => {
 	const handleDelete = (id) => {
 		console.log(id);
 		axios
-			.post('http://localhost:5000/posts/delete', { postId: id })
+			.post('https://calm-plains-01793.herokuapp.com/posts/delete', {
+				postId: id,
+			})
 			.then((response) => {
 				// UPDATE LIST OF POST in UI
 				const listOfPostRemoveIndex = listOfPost.findIndex(

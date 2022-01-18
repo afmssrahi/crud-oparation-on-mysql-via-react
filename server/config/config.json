@@ -1,23 +1,23 @@
 {
 	"development": {
-		"username": "sql6466342",
-		"password": "yW49Vp3xMS",
-		"database": "sql6466342",
+		"username": "root",
+		"password": "26912691",
+		"database": "shahriardb",
 		"host": "localhost",
 		"dialect": "mysql"
 	},
 	"test": {
-		"username": "sql6466342",
-		"password": "yW49Vp3xMS",
-		"database": "sql6466342",
-		"host": "localhost",
+		"username": "root",
+		"password": null,
+		"database": "database_test",
+		"host": "127.0.0.1",
 		"dialect": "mysql"
 	},
 	"production": {
-		"username": "sql6466342",
-		"password": "yW49Vp3xMS",
-		"database": "sql6466342",
-		"host": "localhost",
+		"username": "root",
+		"password": null,
+		"database": "database_production",
+		"host": "127.0.0.1",
 		"dialect": "mysql"
 	}
 }

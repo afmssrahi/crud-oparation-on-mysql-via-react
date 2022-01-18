@@ -20,11 +20,13 @@ const CreatePost = () => {
 	const history = useHistory();
 
 	const handleSubmit = (data) => {
-		axios.post('http://localhost:5000/posts', data).then((response) => {
-			alert('data insert successfully');
+		axios
+			.post('https://calm-plains-01793.herokuapp.com/posts', data)
+			.then((response) => {
+				alert('data insert successfully');
 
-			history.push('/home');
-		});
+				history.push('/home');
+			});
 	};
 
 	return (
